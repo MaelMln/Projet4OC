@@ -1,0 +1,12 @@
+services:
+  php:
+    image: studizz/dev8
+  mysql:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456789
+      MYSQL_DATABASE: oeuvres
+      MYSQL_USER: oeuvres
+      MYSQL_PASSWORD: oeuvres
+  phpmyadmin:
+    image: phpmyadmin
