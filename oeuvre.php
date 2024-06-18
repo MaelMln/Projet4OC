@@ -6,9 +6,9 @@
         header('Location: index.php');
     }
 
-    $query = $mysqlClient->prepare("SELECT * FROM oeuvres WHERE id = ?");
-    $query->execute(array($_GET['id']));
-    $oeuvre = $query->fetch();
+    $stmt = $mysqlClient->prepare("SELECT * FROM oeuvres WHERE id = ?");
+    $stmt->execute(array($_GET['id']));
+    $oeuvre = $stmt->fetch();
 
 
     if(is_null($oeuvre) || empty($oeuvre)) {
